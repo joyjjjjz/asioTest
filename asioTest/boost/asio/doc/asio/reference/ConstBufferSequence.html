@@ -1,10 +1,10 @@
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
 <title>Constant buffer sequence requirements</title>
 <link rel="stylesheet" href="../../boostbook.css" type="text/css">
-<meta name="generator" content="DocBook XSL Stylesheets V1.73.2">
-<link rel="start" href="../../index.html" title="Asio">
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="../../index.html" title="Asio">
 <link rel="up" href="../reference.html" title="Reference">
 <link rel="prev" href="ConnectHandler.html" title="Connect handler requirements">
 <link rel="next" href="ConvertibleToConstBuffer.html" title="Convertible to const buffer requirements">
@@ -15,10 +15,11 @@
 <div class="spirit-nav">
 <a accesskey="p" href="ConnectHandler.html"><img src="../../prev.png" alt="Prev"></a><a accesskey="u" href="../reference.html"><img src="../../up.png" alt="Up"></a><a accesskey="h" href="../../index.html"><img src="../../home.png" alt="Home"></a><a accesskey="n" href="ConvertibleToConstBuffer.html"><img src="../../next.png" alt="Next"></a>
 </div>
-<div class="section" lang="en">
+<div class="section">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="asio.reference.ConstBufferSequence"></a><a class="link" href="ConstBufferSequence.html" title="Constant buffer sequence requirements"> Constant buffer
-      sequence requirements</a></h3></div></div></div>
+<a name="asio.reference.ConstBufferSequence"></a><a class="link" href="ConstBufferSequence.html" title="Constant buffer sequence requirements">Constant buffer sequence
+      requirements</a>
+</h3></div></div></div>
 <p>
         In the table below, <code class="computeroutput"><span class="identifier">X</span></code> denotes
         a class containing objects of type <code class="computeroutput"><span class="identifier">T</span></code>,
@@ -27,7 +28,7 @@
         denotes an identifier.
       </p>
 <div class="table">
-<a name="id2071438"></a><p class="title"><b>Table 3. ConstBufferSequence requirements</b></p>
+<a name="asio.reference.ConstBufferSequence.t0"></a><p class="title"><b>Table&#160;5.&#160;ConstBufferSequence requirements</b></p>
 <div class="table-contents"><table class="table" summary="ConstBufferSequence requirements">
 <colgroup>
 <col>
@@ -36,75 +37,72 @@
 </colgroup>
 <thead><tr>
 <th>
-            <p>
-              expression
-            </p>
-            </th>
+                <p>
+                  expression
+                </p>
+              </th>
 <th>
-            <p>
-              return type
-            </p>
-            </th>
+                <p>
+                  return type
+                </p>
+              </th>
 <th>
-            <p>
-              assertion/note<br> pre/post-condition
-            </p>
-            </th>
+                <p>
+                  assertion/note<br> pre/post-condition
+                </p>
+              </th>
 </tr></thead>
 <tbody>
 <tr>
 <td>
-            <p>
-              <code class="computeroutput"><span class="identifier">X</span><span class="special">::</span><span class="identifier">value_type</span></code>
-            </p>
-            </td>
+                <p>
+                  <code class="computeroutput"><span class="identifier">X</span><span class="special">::</span><span class="identifier">value_type</span></code>
+                </p>
+              </td>
 <td>
-            <p>
-              <code class="computeroutput"><span class="identifier">T</span></code>
-            </p>
-            </td>
+                <p>
+                  <code class="computeroutput"><span class="identifier">T</span></code>
+                </p>
+              </td>
 <td>
-            <p>
-              <code class="computeroutput"><span class="identifier">T</span></code> meets the requirements
-              for <a class="link" href="ConvertibleToConstBuffer.html" title="Convertible to const buffer requirements">ConvertibleToConstBuffer</a>.
-            </p>
-            </td>
+                <p>
+                  <code class="computeroutput"><span class="identifier">T</span></code> meets the requirements
+                  for <a class="link" href="ConvertibleToConstBuffer.html" title="Convertible to const buffer requirements">ConvertibleToConstBuffer</a>.
+                </p>
+              </td>
 </tr>
 <tr>
 <td>
-            <p>
-              <code class="computeroutput"><span class="identifier">X</span><span class="special">::</span><span class="identifier">const_iterator</span></code>
-            </p>
-            </td>
+                <p>
+                  <code class="computeroutput"><span class="identifier">X</span><span class="special">::</span><span class="identifier">const_iterator</span></code>
+                </p>
+              </td>
 <td>
-            <p>
-              iterator type pointing to <code class="computeroutput"><span class="identifier">T</span></code>
-            </p>
-            </td>
+                <p>
+                  iterator type pointing to <code class="computeroutput"><span class="identifier">T</span></code>
+                </p>
+              </td>
 <td>
-            <p>
-              <code class="computeroutput"><span class="identifier">const_iterator</span></code> meets
-              the requirements for bidirectional iterators (C++ Std, 24.1.4).
-            </p>
-            </td>
+                <p>
+                  <code class="computeroutput"><span class="identifier">const_iterator</span></code>
+                  meets the requirements for bidirectional iterators (C++ Std, 24.1.4).
+                </p>
+              </td>
 </tr>
 <tr>
 <td>
-            <p>
-              <code class="computeroutput"><span class="identifier">X</span><span class="special">(</span><span class="identifier">a</span><span class="special">);</span></code>
-            </p>
-            </td>
+                <p>
+                  <code class="computeroutput"><span class="identifier">X</span><span class="special">(</span><span class="identifier">a</span><span class="special">);</span></code>
+                </p>
+              </td>
 <td>
-            <p>
-            </p>
-            </td>
+              </td>
 <td>
-            <p>
-              post: <code class="computeroutput"><span class="identifier">equal_const_buffer_seq</span><span class="special">(</span><span class="identifier">a</span><span class="special">,</span> <span class="identifier">X</span><span class="special">(</span><span class="identifier">a</span><span class="special">))</span></code> where the binary predicate <code class="computeroutput"><span class="identifier">equal_const_buffer_seq</span></code> is defined
-              as 
+                <p>
+                  post: <code class="computeroutput"><span class="identifier">equal_const_buffer_seq</span><span class="special">(</span><span class="identifier">a</span><span class="special">,</span> <span class="identifier">X</span><span class="special">(</span><span class="identifier">a</span><span class="special">))</span></code> where the binary predicate <code class="computeroutput"><span class="identifier">equal_const_buffer_seq</span></code> is defined
+                  as
 </p>
-<pre class="programlisting">
-<span class="keyword">bool</span> <span class="identifier">equal_const_buffer_seq</span><span class="special">(</span>
+<pre class="programlisting"><span class="keyword">bool</span> <span class="identifier">equal_const_buffer_seq</span><span class="special">(</span>
   <span class="keyword">const</span> <span class="identifier">X</span><span class="special">&amp;</span> <span class="identifier">x1</span><span class="special">,</span> <span class="keyword">const</span> <span class="identifier">X</span><span class="special">&amp;</span> <span class="identifier">x2</span><span class="special">)</span>
 <span class="special">{</span>
   <span class="keyword">return</span>
@@ -115,11 +113,10 @@
 <span class="special">}</span>
 </pre>
 <p>
-              and the binary predicate <code class="computeroutput"><span class="identifier">equal_buffer</span></code>
-              is defined as 
+                  and the binary predicate <code class="computeroutput"><span class="identifier">equal_buffer</span></code>
+                  is defined as
 </p>
-<pre class="programlisting">
-<span class="keyword">bool</span> <span class="identifier">equal_buffer</span><span class="special">(</span>
+<pre class="programlisting"><span class="keyword">bool</span> <span class="identifier">equal_buffer</span><span class="special">(</span>
   <span class="keyword">const</span> <span class="identifier">X</span><span class="special">::</span><span class="identifier">value_type</span><span class="special">&amp;</span> <span class="identifier">v1</span><span class="special">,</span>
   <span class="keyword">const</span> <span class="identifier">X</span><span class="special">::</span><span class="identifier">value_type</span><span class="special">&amp;</span> <span class="identifier">v2</span><span class="special">)</span>
 <span class="special">{</span>
@@ -132,35 +129,31 @@
 <span class="special">}</span>
 </pre>
 <p>
-            </p>
-            </td>
+                </p>
+              </td>
 </tr>
 <tr>
 <td>
-            <p>
-              <code class="computeroutput"><span class="identifier">X</span> <span class="identifier">u</span><span class="special">(</span><span class="identifier">a</span><span class="special">);</span></code>
-            </p>
-            </td>
+                <p>
+                  <code class="computeroutput"><span class="identifier">X</span> <span class="identifier">u</span><span class="special">(</span><span class="identifier">a</span><span class="special">);</span></code>
+                </p>
+              </td>
 <td>
-            <p>
-            </p>
-            </td>
+              </td>
 <td>
-            <p>
-              post: 
+                <p>
+                  post:
 </p>
-<pre class="programlisting">
-<span class="identifier">distance</span><span class="special">(</span><span class="identifier">a</span><span class="special">.</span><span class="identifier">begin</span><span class="special">(),</span> <span class="identifier">a</span><span class="special">.</span><span class="identifier">end</span><span class="special">())</span>
+<pre class="programlisting"><span class="identifier">distance</span><span class="special">(</span><span class="identifier">a</span><span class="special">.</span><span class="identifier">begin</span><span class="special">(),</span> <span class="identifier">a</span><span class="special">.</span><span class="identifier">end</span><span class="special">())</span>
   <span class="special">==</span> <span class="identifier">distance</span><span class="special">(</span><span class="identifier">u</span><span class="special">.</span><span class="identifier">begin</span><span class="special">(),</span> <span class="identifier">u</span><span class="special">.</span><span class="identifier">end</span><span class="special">())</span>
     <span class="special">&amp;&amp;</span> <span class="identifier">equal</span><span class="special">(</span><span class="identifier">a</span><span class="special">.</span><span class="identifier">begin</span><span class="special">(),</span> <span class="identifier">a</span><span class="special">.</span><span class="identifier">end</span><span class="special">(),</span>
              <span class="identifier">u</span><span class="special">.</span><span class="identifier">begin</span><span class="special">(),</span> <span class="identifier">equal_buffer</span><span class="special">)</span>
 </pre>
 <p>
-              where the binary predicate <code class="computeroutput"><span class="identifier">equal_buffer</span></code>
-              is defined as 
+                  where the binary predicate <code class="computeroutput"><span class="identifier">equal_buffer</span></code>
+                  is defined as
 </p>
-<pre class="programlisting">
-<span class="keyword">bool</span> <span class="identifier">equal_buffer</span><span class="special">(</span>
+<pre class="programlisting"><span class="keyword">bool</span> <span class="identifier">equal_buffer</span><span class="special">(</span>
   <span class="keyword">const</span> <span class="identifier">X</span><span class="special">::</span><span class="identifier">value_type</span><span class="special">&amp;</span> <span class="identifier">v1</span><span class="special">,</span>
   <span class="keyword">const</span> <span class="identifier">X</span><span class="special">::</span><span class="identifier">value_type</span><span class="special">&amp;</span> <span class="identifier">v2</span><span class="special">)</span>
 <span class="special">{</span>
@@ -173,69 +166,65 @@
 <span class="special">}</span>
 </pre>
 <p>
-            </p>
-            </td>
+                </p>
+              </td>
 </tr>
 <tr>
 <td>
-            <p>
-              <code class="computeroutput"><span class="special">(&amp;</span><span class="identifier">a</span><span class="special">)-&gt;~</span><span class="identifier">X</span><span class="special">();</span></code>
-            </p>
-            </td>
+                <p>
+                  <code class="computeroutput"><span class="special">(&amp;</span><span class="identifier">a</span><span class="special">)-&gt;~</span><span class="identifier">X</span><span class="special">();</span></code>
+                </p>
+              </td>
 <td>
-            <p>
-              <code class="computeroutput"><span class="keyword">void</span></code>
-            </p>
-            </td>
+                <p>
+                  <code class="computeroutput"><span class="keyword">void</span></code>
+                </p>
+              </td>
 <td>
-            <p>
-              note: the destructor is applied to every element of <code class="computeroutput"><span class="identifier">a</span></code>;
-              all the memory is deallocated.
-            </p>
-            </td>
+                <p>
+                  note: the destructor is applied to every element of <code class="computeroutput"><span class="identifier">a</span></code>; all the memory is deallocated.
+                </p>
+              </td>
 </tr>
 <tr>
 <td>
-            <p>
-              <code class="computeroutput"><span class="identifier">a</span><span class="special">.</span><span class="identifier">begin</span><span class="special">();</span></code>
-            </p>
-            </td>
+                <p>
+                  <code class="computeroutput"><span class="identifier">a</span><span class="special">.</span><span class="identifier">begin</span><span class="special">();</span></code>
+                </p>
+              </td>
 <td>
-            <p>
-              <code class="computeroutput"><span class="identifier">const_iterator</span></code> or convertible
-              to <code class="computeroutput"><span class="identifier">const_iterator</span></code>
-            </p>
-            </td>
+                <p>
+                  <code class="computeroutput"><span class="identifier">const_iterator</span></code>
+                  or convertible to <code class="computeroutput"><span class="identifier">const_iterator</span></code>
+                </p>
+              </td>
 <td>
-            <p>
-            </p>
-            </td>
+              </td>
 </tr>
 <tr>
 <td>
-            <p>
-              <code class="computeroutput"><span class="identifier">a</span><span class="special">.</span><span class="identifier">end</span><span class="special">();</span></code>
-            </p>
-            </td>
+                <p>
+                  <code class="computeroutput"><span class="identifier">a</span><span class="special">.</span><span class="identifier">end</span><span class="special">();</span></code>
+                </p>
+              </td>
 <td>
-            <p>
-              <code class="computeroutput"><span class="identifier">const_iterator</span></code> or convertible
-              to <code class="computeroutput"><span class="identifier">const_iterator</span></code>
-            </p>
-            </td>
+                <p>
+                  <code class="computeroutput"><span class="identifier">const_iterator</span></code>
+                  or convertible to <code class="computeroutput"><span class="identifier">const_iterator</span></code>
+                </p>
+              </td>
 <td>
-            <p>
-            </p>
-            </td>
+              </td>
 </tr>
 </tbody>
 </table></div>
 </div>
 <br class="table-break">
 </div>
-<table width="100%"><tr>
+<table xmlns:rev="http://www.cs.rpi.edu/~gregod/boost/tools/doc/revision" width="100%"><tr>
 <td align="left"></td>
-<td align="right"><div class="copyright-footer">Copyright © 2003 - 2008 Christopher M. Kohlhoff<p>
+<td align="right"><div class="copyright-footer">Copyright &#169; 2003-2015 Christopher M.
+      Kohlhoff<p>
         Distributed under the Boost Software License, Version 1.0. (See accompanying
         file LICENSE_1_0.txt or copy at <a href="http://www.boost.org/LICENSE_1_0.txt" target="_top">http://www.boost.org/LICENSE_1_0.txt</a>)
       </p>
